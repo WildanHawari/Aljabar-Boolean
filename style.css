@@ -1,0 +1,102 @@
+html,body{
+    overflow: hidden;
+    height:100%;
+    margin:0;
+  }
+  
+  #lampon{
+    width:100%;
+    height:100%;
+    display:block;
+    background:#111;
+    transition: 300ms;
+  }
+  
+  .lamp,.lampoff{
+    width:100px;
+    height:100px;
+    top:0;
+    left:50%;
+    margin-left:-100px;
+    position:absolute;
+    border-bottom: 100px solid #444;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    z-index:11;
+  }
+  
+  .lampoff{ display: none; }
+  
+  .bulb{
+    position:absolute;
+    top:90px;
+    left:50%;
+    height:32px;
+    width:32px;
+    margin-left:-16px;
+    background:#777;
+    border-radius:32px;
+    z-index:9;
+    transition: 300ms;
+    -webkit-transition-delay:300ms;
+  } 
+  
+  .light{
+    width: 50px;
+    height: 0;
+    top: 90px;
+    left: 50%;
+    margin: -135px 0 0 -740px;
+    border: 715px solid transparent;
+    border-top: none;
+    border-bottom: 1400px solid #FF8;
+    opacity: 0;
+    position: absolute;
+    transition: 300ms;
+    -webkit-transition-delay:300ms;
+  }
+  
+  @-webkit-keyframes pull{
+    0%{ height:100px; background:#666; }
+    50%{ height:120px; }
+    100%{ height:100px; }
+  }
+
+  .saklar,.saklaroff,.saklarB,.saklaroffB {
+    width: 40px;
+    height: 40px;
+    background:#444;
+    position: absolute;
+}
+
+.saklaroff {display: none;}
+.saklarB {display: none;}
+
+.container {
+    display: flex;
+    justify-content: end    ;
+    align-content: end;
+    top: 50%;
+    bottom: 50%;
+}
+.warp #turnon a,
+.warp #turnonB a {
+    text-align: center;
+    color: white;
+    padding-top: 19px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+}
+
+.warp {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: -300px;
+}
